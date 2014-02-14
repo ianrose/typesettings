@@ -12,7 +12,7 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
 
 ## How to setup
 
-To use Typesettings download and `@import` the `_typesettings.scss` partial into your Sass project after your CSS reset.
+To setup Typesettings download and `@import` the `_typesettings.scss` partial into your Sass project after your CSS reset.
 
 ```scss
  @import "path/your-reset";
