@@ -93,3 +93,7 @@ When looking at the computed styles in the inspector you may notice a pixel valu
 [The MIT License (MIT)](https://github.com/ianrose/typesettings/blob/master/LICENSE)
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ianrose/typesettings/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
