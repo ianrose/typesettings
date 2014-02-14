@@ -10,14 +10,14 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
  * It uses modular scale values to set font-size
  * It provides settings for adjusting headlines based on screen width
 
-## Implementation
+## How to setup
 
-To use Typesettings download and `@import` the `_typesettings.scss` partial into your Sass project.
+To use Typesettings download and `@import` the `_typesettings.scss` partial into your Sass project after your CSS reset.
 
 ```scss
- @import "path/yourreset";
+ @import "path/your-reset";
 
- // Typesettings' settings :)
+ // Your settings for Typesettings :)
  $font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
  $font-serif: Georgia, 'Times New Roman', serif;
  $font-mono: 'Lucida Console', Monaco, monospace;
@@ -28,17 +28,14 @@ To use Typesettings download and `@import` the `_typesettings.scss` partial into
  $ms-ratio: 1.414;
  $paragraph-indent: true;
 
- @import "path/typesettings";
- @import "path/yourstyles";
+ @import "path/typesettings"; // Here is the _typesettings.scss partial
+
+ @import "path/your-styles";
 ```
-
-## Requirements
-
-Sass, that's it.
 
 ## How to use
 
-After Typesettings is implemented into your project default type is taken care of. However I bet you want to use modular scale and vertical rhythm in the rest of your project. Here is an example of how to do that:
+After Typesettings is setup in your project the default type styles should be looking good. However I bet you want to use modular scale and vertical rhythm in the rest of your project. Here is an example of how to do that:
 
 The Scss:
 
@@ -67,15 +64,19 @@ The outputted CSS:
 
 ```css
 .your-module {
-    margin-bottom: 1.59075em; // 18px
+    margin-bottom: 1.59075em; /* 18px */
     border-color: #000;
     border-style: solid;
     border-bottom-width: 2px;
-    padding-bottom: 1.414em; // 16px
+    padding-bottom: 1.414em; /* 16px */
     font-size: 0.70721em;
-    line-height: 1.59075; // 18px (Okay, not pixel perfect, 17.9999999999px)
+    line-height: 1.59075; /* 18px (Okay, not pixel perfect, 17.9999999999px) */
 }
 ```
+
+## Requirements
+
+Sass, that's it.
 
 ## Precision
 
@@ -96,4 +97,3 @@ Typesettings uses relative units and many of the values outputted are a result o
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ianrose/typesettings/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
