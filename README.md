@@ -1,7 +1,7 @@
 Typesettings
 ============
 
-Set type in Ems with modular scale, vertical rhythm, and responsive ratio based headlines using Sass. **Why create another type toolkit in Sass?** I couldn't find exactly what I was looking for. I'm using stuff from many different amazing tools while trying to keep it simple.
+Set your type in Ems with modular scale, vertical rhythm, and responsive ratio based headlines using Sass. **Why create another type toolkit in Sass?** I wanted to and I couldn't find exactly what I was looking for. Typesettings uses techniques from many different amazing tools while trying to keep it simple.
 
  * Its only dependency is Sass
  * It uses Ems not REMs or pixels
@@ -17,7 +17,7 @@ To use Typesettings download and `@import` the `_typesettings.scss` partial into
 ```scss
  @import "path/yourreset";
 
- // Typesettings settings :)
+ // Typesettings' settings :)
  $font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
  $font-serif: Georgia, 'Times New Roman', serif;
  $font-mono: 'Lucida Console', Monaco, monospace;
@@ -38,12 +38,12 @@ Sass, that's it.
 
 ## How to use
 
-After Typesettings is implemented into your project default type is taken care of. However I bet you want to use modular scale and vertical rhythm in the rest of your project. Here is an example how to do that:
+After Typesettings is implemented into your project default type is taken care of. However I bet you want to use modular scale and vertical rhythm in the rest of your project. Here is an example of how to do that:
 
 The Scss:
 
 ```scss
-// Using Typesettings default settings
+// This example is using Typesettings' default settings
 // [1] 3 times the baseline grid value for margin-bottom.
 // The second argument is the context font-size. In this case it is 1 step down in
 // the modular scale.
@@ -79,7 +79,7 @@ The outputted CSS:
 
 ## Precision
 
-When looking at the computed styles in the inspector you may notice a pixel value like 17.999999px. This happens as a result of converting values from one type of unit to another in the functions. When the user is looking at the site, the whole site will still sit on baseline, just the baseline may differ slightly from one browser to another.
+Typesettings uses relative units and many of the values outputted are a result of dividing and multiplying. So a computed pixel value like 17.999999px will sometimes happen.
 
 ## Thanks and Resources
 
