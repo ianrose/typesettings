@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+/*
+* ---------------------
+* Typesettings
+* ---------------------
+* A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.
+* Oh, and pixel borders that maintain rhythm.
+*
+* Version: v1.0.1-beta
+* Github: https://github.com/ianrose/typesettings
+* License: The MIT License (MIT)
+*
+* Inspired by and used stuff from:
+* https://github.com/typeplate/typeplate.github.io
+* https://github.com/csswizardry/typecsset
+*/
+
+// ---------------------
+// Config Variables
+// ---------------------
+$font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-serif: Georgia, 'Times New Roman', serif !default;
+$font-mono: 'Lucida Console', Monaco, monospace !default;
+$text-color: #000 !default;
+
+// The vertical grid unit. Margin, padding, and line-height are set to multiples of this value.
+// This is the value that determines the baseline for our vertical rhythm. The default value of 6px
+// allows more fine tuned designs that still obery vertical rhythm.
+$base-vertical-unit: 6px !default;
+
+// The value that multiplies the $base-vertical-unit to get the $base-line-height. This gives type
+// an ideal line-height.
+$base-line-multi: 4 !default;
+
+// Base font size in pixels.
+$base-font-size: 16px !default;
+
+// Modular scale ratio that is used to figure out all the different font sizes
+$ms-ratio: 1.414 !default;
+
+// Paragraph settings
+$paragraph-indent: true !default;
+
+// ---------------------
+// Internal Variable(s)
+// ---------------------
+// Best not to adjust these variable.
+
+// Converts the $base-font-size value to EMs
+$base-em-font-size: ($base-font-size / 16px) * 1em !default;
+
+// One step down in the modular scale in EMs
+$ms-down1: $base-em-font-size / $ms-ratio;
+
+// Two steps down in the modular scale in EMs
+$ms-down2: $ms-down1 /$ms-ratio;
+
+// Three steps down in the modular scale in EMs
+$ms-down3: $ms-down2 / $ms-ratio;
+
+// One step up in the modular scale in EMs
+$ms-up1: $base-em-font-size * $ms-ratio;
+
+// Two steps up in the modular scale in EMs
+$ms-up2: $ms-up1 * $ms-ratio;
+
+// Three steps up in the modular scale in EMs
+$ms-up3: $ms-up2 * $ms-ratio;
+
+// Four steps up in the modular scale in EMs
+$ms-up4: $ms-up3 * $ms-ratio;
+
+// Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm.
+$base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
+
+// ---------------------
+// Helper function(s)
+// ---------------------
+// Returns a number without a unit. For example 16px becomes 16
+@function stripUnits($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Returns an EM value. For example 24px becomes 1.5em
+@function emCalc($target, $context: $base-font-size) {
+  @return stripUnits(($target / $context)) + 0em;
+}
+
+// Returns an EM value that is a multiple of our defined base vertical unit. For example 3 becomes 1.125em
+@function emRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size) {
+  @return (stripUnits($lines) * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+// Returns a unitless number that is a multiple of our defined base vertical unit. For example 3 becomes 1.125
+@function unitlessRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size) {
+  @return ($lines * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size));
+}
+
+// ---------------------
+// Mixin(s)
+// ---------------------
+// Finally, the tools that you can use throughout your project to set
+// all the wonderful type related stuffs.
+
+// Sets the type in EMs and makes a vertical rhythm unitless line-height that is based on context.
+@mixin setType($lines: $base-line-multi, $font-size: $base-em-font-size) {
+  font-size: $font-size;
+  line-height: unitlessRhythm($lines, $font-size);
+}
+
+// Creates a vertical rhythm unitless line-height that is based on context
+@mixin setLeading($lines: $base-line-multi, $font-size: $base-em-font-size) {
+  line-height: unitlessRhythm($lines, $font-size);
+}
+
+@mixin rhythmBorderTop($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
+  border-top-width: $border-width;
+  padding-top: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+@mixin rhythmBorderBottom($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
+  border-bottom-width: $border-width;
+  padding-bottom: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+@mixin rhythmBorder($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
+  border-width: $border-width;
+  padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+// ---------------------
+// Default Type Styles
+// ---------------------
+html {
+  font-size: ($base-font-size / 16px) * 100%; // Sets the font-size of the project as a percentage. Making it easy to scale up/down the whole project for specific media queries
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-serif;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: $text-color;
+}
+
+h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 0;
+  padding: 0 auto;
+  font-family: $font-sans;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+// [1] Applies a margin bottom that is a multiple of the vertical grid in EMs. The first argument is the font size context and the second is multiple of the vertical grid unit.
+// [2] Sets the type to one of the modular scale values and the second argument sets a unitless line-height as a multiple of the vertical grid.
+// [3] A generic media query for tablet size ranges.
+// [4] Applies a margin bottom that is the same vertical grid value as the mobile first rule.
+// [5] Sets the type to one of the modular scale values and the second argument sets a unitless line-height as a multiple of the vertical grid.
+h1, .h1 {
+  margin-bottom: emRhythm(4, $ms-up2); // [1]
+  @include setType(6, $ms-up2); // [2]
+
+  @media (min-width: 43.75em) {
+    // [3]
+    margin-bottom: emRhythm(4, $ms-up3); // [4]
+    @include setType(8, $ms-up3); // [5]
+  }
+
+  @media (min-width: 56.25em) {
+    margin-bottom: emRhythm(4, $ms-up4);
+    @include setType(10, $ms-up4);
+  }
+}
+
+h2, .h2 {
+  margin-bottom: emRhythm(4, $ms-up1);
+  @include setType(5, $ms-up1);
+
+  @media (min-width: 43.75em) {
+    margin-bottom: emRhythm(4, $ms-up2);
+    @include setType(6, $ms-up2)
+  }
+
+  @media (min-width: 56.25em) {
+    margin-bottom: emRhythm(4, $ms-up3);
+    @include setType(8, $ms-up3);
+  }
+}
+
+h3, .h3 {
+  margin-bottom: emRhythm(4, $ms-up1);
+  @include setType(5, $ms-up1);
+
+  @media (min-width: 56.25em) {
+    margin-bottom: emRhythm(4, $ms-up2);
+    @include setType(6, $ms-up2);
+  }
+}
+
+h4, .h4 {
+  margin-bottom: emRhythm(4, $ms-up1);
+  @include setType(5, $ms-up1);
+}
+
+h5, .h5 {
+  margin-bottom: emRhythm(4);
+  @include setType(4);
+}
+
+h6, .h6 {
+  @extend h5;
+}
+
+p {
+  margin-top: 0;
+  padding: 0 auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  max-width: emRhythm(96);
+  margin-bottom: emRhythm(4);
+
+  @media (min-width: 43.75em) {
+    text-align: justify;
+  }
+}
+
+@if $paragraph-indent {
+  p + p {
+    margin-top: emRhythm(-4);
+    text-indent: emRhythm(4);
+  }
+}
+
+small, .font-small {
+  @include setType(3, $ms-down1);
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  padding: 0 auto;
+  font-family: $font-mono;
+  font-weight: bold;
+  margin-top: emRhythm(4);
+  margin-bottom: emRhythm(4);
+  padding-left: emRhythm(4);
+  margin-left: emRhythm(-5);
+  border-left: $base-vertical-unit solid lighten(#000, 50%);
+
+  footer {
+    cite {
+      &:before {
+        content: " – ";
+      }
+    }
+  }
+}
+
+pre {
+  margin-bottom: emRhythm(4);
+}
+
+pre, code {
+  font-family: $font-mono;
+}
+
+time, .time {
+  text-transform: uppercase;
+}
+
+ol, ul {
+  margin-top: 0;
+  padding: 0 auto;
+  margin-bottom: emRhythm(4);
+  margin-left: emRhythm(4);
+}
+
+ul {
+  list-style: disc;
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+  list-style: decimal;
+}
+
+abbr {
+  font-variant: small-caps; // https://developer.mozilla.org/en-US/docs/CSS/font-variant
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+abbr[title]:hover {
+  cursor: help; // cursor changed to a question mark when it has a title
+}
