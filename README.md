@@ -5,6 +5,7 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
 
  * Its only dependency is Sass
  * It uses Ems not REMs or pixels
+ * Handles all the math for Ems including the compounding
  * It maintains vertical rhythm with pixel based borders using padding set in Ems
  * It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style
  * It uses modular scale values to set font-size
