@@ -8,126 +8,140 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Typsettings | Home</title>
-    <meta name="description" content="Typesettings - A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.">
-    <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Typsettings | Home</title>
+  <meta name="description" content="Typesettings - A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.">
+  <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 
-    <!--[if lt IE 9]>
-    <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
-    <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please
-    <a href="http://browsehappy.com/">upgrade your browser</a> or
-    <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
+  <a href="http://browsehappy.com/">upgrade your browser</a> or
+  <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your
+  experience.
 </p>
 <![endif]-->
 
 <div class="header-container">
-    <header>
-        <div class="logo">
-            <div class="icon-logo"></div>
-            <h1>Typesettings</h1></div>
-        <p class="lead">A Sass Type Toolkit</p>
-        <a class="button button-default" href="https://github.com/ianrose/typesettings">View Source</a>
-        <a class="button button-default" href="https://github.com/ianrose/typesettings/zipball/master">Download Latest</a>
-    </header>
+  <header>
+    <div class="logo">
+      <div class="icon-logo"></div>
+      <h1>Typesettings</h1></div>
+    <p class="lead">A Sass Type Toolkit</p>
+    <a class="button button-default" href="https://github.com/ianrose/typesettings">View Source</a>
+    <a class="button button-default" href="https://github.com/ianrose/typesettings/zipball/master">Download Latest</a>
+    <a class="button button-default" href="https://github.com/ianrose/typesettings/tree/gh-pages">Example Code</a>
+  </header>
 </div>
 <div class="main-container">
-    <div class="main wrapper">
-        <article>
-            <header class="limit-measure">
-                <h2>A Sass Type Toolkit</h2>
+  <div class="main wrapper">
+    <article>
+      <header class="limit-measure">
+        <h2>A Sass Type Toolkit</h2>
 
-                <p>Set your type in Ems with modular scale, vertical rhythm, and responsive ratio based headlines using Sass.
-                    <strong>Why create another type toolkit in Sass?</strong> I wanted to and I couldn&#8217;t find exactly what I was looking for. Typesettings uses techniques from many different amazing tools while trying to keep it simple.
-                </p>
-                <ul>
-                    <li>Its only dependency is Sass</li>
-                    <li>It uses Ems not REMs or pixels</li>
-                    <li>It maintains vertical rhythm with pixel based borders using padding set in Ems</li>
-                    <li>It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style</li>
-                    <li>It uses modular scale values to set font-size</li>
-                    <li>It provides settings for adjusting headlines based on screen width</li>
-                </ul>
-            </header>
-            <section>
-                <div class="limit-measure">
-                    <h3>How to setup</h3>
-                    <p>To setup Typesettings download and <code>@import</code> the
-                    <code>_typesettings.scss</code> partial into your Sass project after your CSS reset.</p>
-                </div>
-                <script src="https://gist.github.com/ianrose/9042257.js"></script>
-            </section>
-            <section>
-                <div class="limit-measure">
-                    <h3>How to use</h3>
+        <p>Set your type in Ems with modular scale, vertical rhythm, and responsive ratio based headlines using Sass.
+          <strong>Why create another type toolkit in Sass?</strong> I wanted to and I couldn&#8217;t find exactly what I
+          was looking for. Typesettings uses techniques from many different amazing tools while trying to keep it
+          simple.
+        </p>
+        <ul>
+          <li>Its only dependency is Sass</li>
+          <li>It uses Ems not REMs or pixels</li>
+          <li>Handles all the math for Ems including the compunding</li>
+          <li>It maintains vertical rhythm with pixel based borders using padding set in Ems</li>
+          <li>It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style</li>
+          <li>It uses modular scale values to set font-size</li>
+          <li>It provides settings for adjusting headlines based on screen width</li>
+        </ul>
+      </header>
+      <section>
+        <div class="limit-measure">
+          <h3>How to setup</h3>
 
-                    <p>After Typesettings is setup in your project the default type styles should be looking good. However I bet you want to use modular scale and vertical rhythm in the rest of your project. Here is an example of how to do that:</p>
-                    <h4>The Scss:</h4>
-                </div>
-                <script src="https://gist.github.com/ianrose/9042508.js"></script>
+          <p>To setup Typesettings download and <code>@import</code> the
+            <code>_typesettings.scss</code> partial into your Sass project after your CSS reset.</p>
+        </div>
+        <script src="https://gist.github.com/ianrose/9042257.js"></script>
+      </section>
+      <section>
+        <div class="limit-measure">
+          <h3>How to use</h3>
 
-                <div class="limit-measure">
-                    <h4>The outputted CSS:</h4>
-                </div>
-                <script src="https://gist.github.com/ianrose/9042515.js"></script>
-            </section>
-            <section>
-                <div class="limit-measure">
-                    <h3>Requirements</h3>
+          <p>After Typesettings is setup in your project the default type styles should be looking good. However I bet
+            you want to use modular scale and vertical rhythm in the rest of your project. Here is an example of how to
+            do that:</p>
+          <h4>The Scss:</h4>
+        </div>
+        <script src="https://gist.github.com/ianrose/9042508.js"></script>
 
-                    <p>Sass, that&#8217;s it.</p>
-                </div>
-            </section>
-            <section class="limit-measure">
-                <h3>Precision</h3>
+        <div class="limit-measure">
+          <h4>The outputted CSS:</h4>
+        </div>
+        <script src="https://gist.github.com/ianrose/9042515.js"></script>
+        <div class="limit-measure">
+          <p>You can also look at the <a href="https://github.com/ianrose/typesettings/tree/gh-pages">source code of
+            this site</a> to see how it was made using Typesettings.</p>
+        </div>
+      </section>
+      <section>
+        <div class="limit-measure">
+          <h3>Requirements</h3>
 
-                <p>Typesettings uses relative units and many of the values outputted are a result of dividing and multiplying. So a computed pixel value like
-                    <code>17.999999px</code> will sometimes happen.</p>
-            </section>
-            <section class="limit-measure">
-                <h3>Thanks and Resources</h3>
-                <ul>
-                    <li><a href="http://type-scale.com/">Type-scale.com</a></li>
-                    <li><a href="https://github.com/typeplate/typeplate.github.io">Typeplate</a></li>
-                    <li><a href="https://github.com/csswizardry/typecsset">Typecsset</a></li>
-                    <li><a href="https://github.com/chriseppstein/compass">Compass</a></li>
-                </ul>
-            </section>
-            <section class="limit-measure">
-                <h3>License</h3>
+          <p>Sass, that&#8217;s it.</p>
+        </div>
+      </section>
+      <section class="limit-measure">
+        <h3>Precision</h3>
 
-                <p><a href="https://github.com/ianrose/typesettings/blob/master/LICENSE">The MIT License (MIT)</a></p>
-            </section>
-            <section class="limit-measure">
-                <p class="to-top"><a href="#" class="button button-primary">Back to Top</a></p>
-            </section>
-        </article>
-    </div>
+        <p>Typesettings uses relative units and many of the values outputted are a result of dividing and multiplying.
+          So a computed pixel value like
+          <code>17.999999px</code> will sometimes happen.</p>
+      </section>
+      <section class="limit-measure">
+        <h3>Thanks and Resources</h3>
+        <ul>
+          <li><a href="http://type-scale.com/">Type-scale.com</a></li>
+          <li><a href="https://github.com/typeplate/typeplate.github.io">Typeplate</a></li>
+          <li><a href="https://github.com/csswizardry/typecsset">Typecsset</a></li>
+          <li><a href="https://github.com/chriseppstein/compass">Compass</a></li>
+        </ul>
+      </section>
+      <section class="limit-measure">
+        <h3>License</h3>
+
+        <p><a href="https://github.com/ianrose/typesettings/blob/master/LICENSE">The MIT License (MIT)</a></p>
+      </section>
+      <section class="limit-measure">
+        <p class="to-top"><a href="#" class="button button-primary">Back to Top</a></p>
+      </section>
+    </article>
+  </div>
 </div>
 <div class="footer-container">
-    <footer>
-        <p>This project is maintained by <a href="https://github.com/ianrose">ianrose</a></p>
-        <p><a href="credits.html">Credits</a></p>
-    </footer>
+  <footer>
+    <p>This project is maintained by <a href="https://github.com/ianrose">ianrose</a></p>
+
+    <p><a href="credits.html">Credits</a></p>
+  </footer>
 </div>
 <script>
-    var _gaq = [
-        ['_setAccount', 'UA-20417568-2'],
-        ['_trackPageview']
-    ];
-    (function (d, t) {
-        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        g.src = '//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s)
-    }(document, 'script'));
+  var _gaq = [
+    ['_setAccount', 'UA-20417568-2'],
+    ['_trackPageview']
+  ];
+  (function (d, t) {
+    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s)
+  }(document, 'script'));
 </script>
 </body>
 </html>
