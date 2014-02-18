@@ -124,7 +124,6 @@ a {
   background-image: none;
   white-space: nowrap;
   border-radius: 4px;
-  color: #fff;
   text-decoration: none;
   font-family: $font-sans;
   -webkit-user-select: none;
@@ -136,6 +135,16 @@ a {
   @include rhythmBorder(2px, 3);
 }
 
+.button-default {
+  border-color: #fff;
+  color: #fff;
+}
+
+.button-primary {
+  border-color: #000;
+  color: #000;
+}
+
 .limit-measure {
   max-width: emRhythm(96);
   margin-left: auto;
@@ -144,10 +153,6 @@ a {
 
 .main-container {
   padding: 0 emRhythm(3);
-}
-
-.divider {
-
 }
 
 article {
@@ -180,6 +185,16 @@ article {
   max-width: emRhythm(150);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: emRhythm(4, $ms-down1);
+  @include setType(3, $ms-down1);
+}
+
+.gist .gist-file {
+  margin-bottom: 0 !important;
+}
+
+.gist .gist-file .gist-data {
+  border: none !important;
 }
 
 .gist .gist-file .gist-meta {
