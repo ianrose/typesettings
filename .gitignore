@@ -20,6 +20,7 @@ Thumbs.db
 *.swo
 *.swp
 ._*
+.sass-cache
 *~
 
 # Ignore packages #
