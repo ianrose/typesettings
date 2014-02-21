@@ -7,6 +7,7 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
  * It uses Ems not REMs or pixels
  * Handles all the math for Ems including the compounding
  * It maintains vertical rhythm with pixel based borders using padding set in Ems
+ * It comes with a default 6px baseline to maintain rhythm on all block elements
  * It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style
  * It uses modular scale values to set font-size
  * It provides settings for adjusting headlines based on screen width
