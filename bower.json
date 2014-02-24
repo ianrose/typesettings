@@ -1,25 +1,29 @@
 {
-  name: "typesettings",
-  version: "v1.0.2-beta",
-  homepage: "https://github.com/ianrose/typesettings",
-  author: [
+  "name": "typesettings",
+  "version": "1.0.2-beta",
+  "homepage": "https://github.com/ianrose/typesettings",
+  "authors": [
     "Ian Rose"
   ],
-  description: "A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.",
-  main: "_typesettings.scss",
-  keywords: [
+  "description": "A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.",
+  "main": "_typesettings.scss",
+  "keywords": [
     "typography",
     "design",
     "type",
-    "vertical rhythm",
-    "modular scale",
+    "vertical",
+    "rhythm",
+    "modular",
+    "scale",
     "ui"
   ],
-  license: [
-    "MIT"
-  ],
-  ignore: [
-    "component.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
     "sache.json"
   ]
 }
