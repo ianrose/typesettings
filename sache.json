@@ -1,0 +1,5 @@
+{
+  "name": "Typesettings",
+  "description": "A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.",
+  "tags": ["type", "vertical rhythm", "modular scale", "typography"]
+}
