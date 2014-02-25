@@ -76,6 +76,8 @@ The outputted CSS:
 }
 ```
 
+You can also look at the source code of the [document site](https://github.com/ianrose/typesettings/tree/gh-pages) to see how it was made using Typesettings.
+
 ## Requirements
 
 Sass, that's it.
