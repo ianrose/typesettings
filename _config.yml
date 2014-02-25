@@ -1,2 +1,3 @@
 gems:
 - jekyll-compass
+exclude: [Gemfile, Gemfile.lock]
