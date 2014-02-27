@@ -29,6 +29,7 @@ To setup Typesettings download and `@import` the `_typesettings.scss` partial in
  $base-font-size: 16px;
  $ms-ratio: 1.414;
  $paragraph-indent: true;
+ $paragraph-justify: true;
 
  @import "path/typesettings"; // Here is the _typesettings.scss partial
 
