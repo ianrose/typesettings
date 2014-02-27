@@ -40,6 +40,7 @@ $ms-ratio: 1.414 !default;
 
 // Paragraph settings
 $paragraph-indent: true !default;
+$paragraph-justify: true !default;
 
 // ---------------------
 // Internal Variable(s)
@@ -225,7 +226,9 @@ p {
   margin-bottom: emRhythm(4);
 
   @media (min-width: 43.75em) {
-    text-align: justify;
+    @if $paragraph-justify {
+      text-align: justify;
+    }
   }
 }
 
