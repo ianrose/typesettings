@@ -18,7 +18,7 @@ There are three ways you can download Typesettings.
 
 * [Download the latest release](https://github.com/ianrose/typesettings/archive/v1.1.4-beta.zip)
 * Clone the repo: `git clone https://github.com/ianrose/typesettings.git`
-* Install with [Bower](http://bower.io/): `bower install typesettings`
+* Install with [Bower](http://bower.io/): `bower install typesettings --save-dev`
 
 To start using Typesettings `@import` the `_typesettings.scss` partial into your Sass project after your CSS reset.
 
