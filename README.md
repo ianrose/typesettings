@@ -16,7 +16,7 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
 
 There are three ways you can download Typesettings.
 
-* [Download the latest release](https://github.com/ianrose/typesettings/archive/v1.1.4-beta.zip)
+* [Download the latest release](https://github.com/ianrose/typesettings/releases/latest)
 * Clone the repo: `git clone https://github.com/ianrose/typesettings.git`
 * Install with [Bower](http://bower.io/): `bower install typesettings --save-dev`
 
@@ -91,7 +91,7 @@ Sass, that's it.
 
 ## Precision
 
-Typesettings uses relative units and many of the values outputted are a result of dividing and multiplying. So a computed pixel value like 17.999999px will sometimes happen.
+Typesettings uses relative units and many of the values outputted are a result of dividing and multiplying. So a computed pixel value like `17.999999px` will sometimes happen.
 
 ## Thanks and Resources
 
