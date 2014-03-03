@@ -103,8 +103,3 @@ Typesettings uses relative units and many of the values outputted are a result o
 ## License
 
 [The MIT License (MIT)](https://github.com/ianrose/typesettings/blob/master/LICENSE)
-
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ianrose/typesettings/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
