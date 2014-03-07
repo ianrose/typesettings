@@ -106,7 +106,7 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 // Sets the type in EMs and makes a vertical rhythm unitless line-height that is based on context.
 @mixin setType($lines: $base-line-multi, $font-size: $base-em-font-size) {
   font-size: $font-size;
-  line-height: unitlessRhythm($lines, $font-size);
+  line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
 }
 
 // Creates a vertical rhythm unitless line-height that is based on context
@@ -160,53 +160,53 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 // [5] Sets the type to one of the modular scale values and the second argument sets a unitless line-height as a multiple of the vertical grid.
 h1, .h1 {
   margin-bottom: emRhythm(4, $ms-up2); // [1]
-  @include setType(6, $ms-up2); // [2]
+  @include setType($ms-up2); // [2]
 
   @media (min-width: 43.75em) {
     // [3]
     margin-bottom: emRhythm(4, $ms-up3); // [4]
-    @include setType(8, $ms-up3); // [5]
+    @include setType($ms-up3); // [5]
   }
 
   @media (min-width: 56.25em) {
     margin-bottom: emRhythm(4, $ms-up4);
-    @include setType(10, $ms-up4);
+    @include setType( $ms-up4);
   }
 }
 
 h2, .h2 {
   margin-bottom: emRhythm(4, $ms-up1);
-  @include setType(5, $ms-up1);
+  @include setType($ms-up1);
 
   @media (min-width: 43.75em) {
     margin-bottom: emRhythm(4, $ms-up2);
-    @include setType(6, $ms-up2)
+    @include setType($ms-up2)
   }
 
   @media (min-width: 56.25em) {
     margin-bottom: emRhythm(4, $ms-up3);
-    @include setType(8, $ms-up3);
+    @include setType($ms-up3);
   }
 }
 
 h3, .h3 {
   margin-bottom: emRhythm(4, $ms-up1);
-  @include setType(5, $ms-up1);
+  @include setType($ms-up1);
 
   @media (min-width: 56.25em) {
     margin-bottom: emRhythm(4, $ms-up2);
-    @include setType(6, $ms-up2);
+    @include setType($ms-up2);
   }
 }
 
 h4, .h4 {
   margin-bottom: emRhythm(4, $ms-up1);
-  @include setType(5, $ms-up1);
+  @include setType($ms-up1);
 }
 
 h5, .h5 {
   margin-bottom: emRhythm(4);
-  @include setType(4);
+  @include setType();
 }
 
 h6, .h6 {
@@ -240,7 +240,7 @@ p {
 }
 
 small, .font-small {
-  @include setType(3, $ms-down1);
+  @include setType($ms-down1);
 }
 
 em {
