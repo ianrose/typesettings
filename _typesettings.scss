@@ -23,6 +23,9 @@ $font-serif: Georgia, 'Times New Roman', serif !default;
 $font-mono: 'Lucida Console', Monaco, monospace !default;
 $text-color: #000 !default;
 
+$border-style: solid !default;
+$border-color: #ccc !default;
+
 // The vertical grid unit. Margin, padding, and line-height are set to multiples of this value.
 // This is the value that determines the baseline for our vertical rhythm. The default value of 6px
 // allows more fine tuned designs that still obery vertical rhythm.
@@ -114,18 +117,18 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
   line-height: unitlessRhythm($lines, $font-size);
 }
 
-@mixin rhythmBorderTop($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
-  border-top-width: $border-width;
+@mixin rhythmBorderTop($border-width: 1px, $style: $border-style, $color: $border-color, $lines: $base-line-multi, $font-size: $root-size-em) {
+  border-top: $border-width $style $color;
   padding-top: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
-@mixin rhythmBorderBottom($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
-  border-bottom-width: $border-width;
+@mixin rhythmBorderBottom($border-width: 1px, $style: $border-style, $color: $border-color, $lines: $base-line-multi, $font-size: $root-size-em) {
+  border-bottom: $border-width $style $color;
   padding-bottom: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
-@mixin rhythmBorder($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
-  border-width: $border-width;
+@mixin rhythmBorder($border-width: 1px, $style: $border-style, $color: $border-color, $lines: $base-line-multi, $font-size: $root-size-em) {
+  border: $border-width $style $color;
   padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
