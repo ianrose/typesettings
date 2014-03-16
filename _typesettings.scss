@@ -152,7 +152,8 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 0;
-  padding: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
   font-family: $font-sans;
   font-weight: bold;
   text-transform: uppercase;
@@ -217,7 +218,8 @@ h6, .h6 {
 
 p {
   margin-top: 0;
-  padding: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -254,7 +256,8 @@ strong {
 }
 
 blockquote {
-  padding: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
   font-family: $font-mono;
   font-weight: bold;
   margin-top: emRhythm(4);
@@ -282,7 +285,8 @@ time, .time {
 
 ol, ul {
   margin-top: 0;
-  padding: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
   margin-bottom: emRhythm(4);
   margin-left: emRhythm(4);
 }
