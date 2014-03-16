@@ -99,6 +99,7 @@ Typesettings uses relative units and many of the values outputted are a result o
 * [Typeplate](https://github.com/typeplate/typeplate.github.io)
 * [Typecsset](https://github.com/csswizardry/typecsset)
 * [Compass](https://github.com/chriseppstein/compass)
+* [Sassaparilla](http://sass.fffunction.co/)
 
 ## License
 
