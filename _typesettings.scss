@@ -243,7 +243,8 @@ p {
   }
 }
 
-small, .font-small {
+small,
+.font-small {
   @include setType(3, $ms-down1);
 }
 
@@ -275,15 +276,19 @@ blockquote {
   }
 }
 
-pre, code {
+pre,
+code {
   font-family: $font-mono;
 }
 
-time, .time {
+time,
+.time {
   text-transform: uppercase;
 }
 
-ol, ul {
+ol,
+ul,
+dl {
   margin-top: 0;
   margin-bottom: emRhythm(4);
   margin-left: emRhythm(4);
@@ -291,19 +296,14 @@ ol, ul {
   padding-bottom: 0;
 }
 
-ul {
-  list-style: disc;
-
-  ul {
-    margin-bottom: 0;
-  }
+ul ul,
+ol ol,
+dl dl {
+  margin-left: 0;
 }
 
-ol {
-
-  ol {
-    margin-bottom: 0;
-  }
+ul {
+  list-style: disc;
 }
 
 ol {
