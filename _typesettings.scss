@@ -256,14 +256,14 @@ strong {
 }
 
 blockquote {
-  padding-top: 0;
-  padding-bottom: 0;
-  font-family: $font-mono;
-  font-weight: bold;
   margin-top: emRhythm(4);
   margin-bottom: emRhythm(4);
-  padding-left: emRhythm(4);
   margin-left: emRhythm(-5);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: emRhythm(4);
+  font-family: $font-mono;
+  font-weight: bold;
   border-left: $base-vertical-unit solid lighten(#000, 50%);
 
   footer {
@@ -285,10 +285,10 @@ time, .time {
 
 ol, ul {
   margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
   margin-bottom: emRhythm(4);
   margin-left: emRhythm(4);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 ul {
