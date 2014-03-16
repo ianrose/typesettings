@@ -134,6 +134,7 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 // ---------------------
 html {
   font-size: ($base-font-size / 16px) * 100%; // Sets the font-size of the project as a percentage. Making it easy to scale up/down the whole project for specific media queries
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
