@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /** 
 * ==============================================================================
 * Typesettings
@@ -49,8 +50,10 @@ $ms-ratio: 1.414 !default;
 // of a new paragraph.
 // [2] Paragraph setting that you can turn on or off to have your paragraphs ragged
 // right or justified.
-$paragraph-indent: true !default; // [1]
-$paragraph-justify: true !default; // [2]
+$paragraph-indent: true !default;
+// [1]
+$paragraph-justify: true !default;
+// [2]
 
 //==============================================================================
 // Internal Variables
@@ -69,13 +72,20 @@ $base-em-font-size: ($base-font-size / 16px) * 1em !default;
 // [5] Two steps up in the modular scale in EMs
 // [6] Three steps up in the modular scale in EMs
 // [7] Four steps up in the modular scale in EMs
-$ms-down1: $base-em-font-size / $ms-ratio; // [1]
-$ms-down2: $ms-down1 /$ms-ratio; // [2]
-$ms-down3: $ms-down2 / $ms-ratio; // [3]
-$ms-up1: $base-em-font-size * $ms-ratio; // [4]
-$ms-up2: $ms-up1 * $ms-ratio; // [5]
-$ms-up3: $ms-up2 * $ms-ratio; // [6]
-$ms-up4: $ms-up3 * $ms-ratio; // [7]
+$ms-down1: $base-em-font-size / $ms-ratio;
+// [1]
+$ms-down2: $ms-down1 /$ms-ratio;
+// [2]
+$ms-down3: $ms-down2 / $ms-ratio;
+// [3]
+$ms-up1: $base-em-font-size * $ms-ratio;
+// [4]
+$ms-up2: $ms-up1 * $ms-ratio;
+// [5]
+$ms-up3: $ms-up2 * $ms-ratio;
+// [6]
+$ms-up4: $ms-up3 * $ms-ratio;
+// [7]
 
 // Creates a unitless line-height that is based on typographic ideals and
 // maintains vertical rhythm.
@@ -195,7 +205,8 @@ h1, .h1 {
   margin-bottom: emRhythm(4, $ms-up2); // [1]
   @include setType(6, $ms-up2); // [2]
 
-  @media (min-width: 43.75em) { // [3]
+  @media (min-width: 43.75em) {
+    // [3]
     margin-bottom: emRhythm(4, $ms-up3); // [4]
     @include setType(8, $ms-up3); // [5]
   }
@@ -348,10 +359,12 @@ abbr[title]:hover {
   cursor: help;
 }
 
+// Creates horizontal rules that obey the baseline.
+// [1] Zero outs the user agent border
 hr {
-  border: 0;
   margin-top: emRhythm(4);
   margin-bottom: 0;
+  border: none; // [1]
   border-top-color: $text-color;
   border-top-style: solid;
   @include rhythmBorderTop(1px, 4);
