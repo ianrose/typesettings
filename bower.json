@@ -1,6 +1,6 @@
 {
   "name": "typesettings",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "https://github.com/ianrose/typesettings",
   "authors": [
     "Ian Rose"
@@ -22,6 +22,8 @@
     "bower_components",
     "test",
     "tests",
-    "sache.json"
+    "sache.json",
+    "Gruntfile.js",
+    "package.json"
   ]
 }
