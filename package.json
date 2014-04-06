@@ -1,0 +1,25 @@
+{
+  "name": "typesettings",
+  "version": "1.2.1",
+  "description": "A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.",
+  "main": "_typesettings.scss",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-sass": "^0.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ianrose@github.com/ianrose/typesettings.git"
+  },
+  "keywords": [
+    "type",
+    "sass",
+    "baseline"
+  ],
+  "author": "Ian Rose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianrose/typesettings/issues"
+  },
+  "homepage": "https://github.com/ianrose/typesettings"
+}
