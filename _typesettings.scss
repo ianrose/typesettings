@@ -72,20 +72,13 @@ $base-em-font-size: ($base-font-size / 16px) * 1em !default;
 // [5] Two steps up in the modular scale in EMs
 // [6] Three steps up in the modular scale in EMs
 // [7] Four steps up in the modular scale in EMs
-$ms-down1: $base-em-font-size / $ms-ratio;
-// [1]
-$ms-down2: $ms-down1 /$ms-ratio;
-// [2]
-$ms-down3: $ms-down2 / $ms-ratio;
-// [3]
-$ms-up1: $base-em-font-size * $ms-ratio;
-// [4]
-$ms-up2: $ms-up1 * $ms-ratio;
-// [5]
-$ms-up3: $ms-up2 * $ms-ratio;
-// [6]
-$ms-up4: $ms-up3 * $ms-ratio;
-// [7]
+$ms-down1: $base-em-font-size / $ms-ratio; // [1]
+$ms-down2: $ms-down1 /$ms-ratio; // [2]
+$ms-down3: $ms-down2 / $ms-ratio; // [3]
+$ms-up1: $base-em-font-size * $ms-ratio; // [4]
+$ms-up2: $ms-up1 * $ms-ratio; // [5]
+$ms-up3: $ms-up2 * $ms-ratio; // [6]
+$ms-up4: $ms-up3 * $ms-ratio; // [7]
 
 // Creates a unitless line-height that is based on typographic ideals and
 // maintains vertical rhythm.
