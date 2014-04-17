@@ -10,7 +10,7 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
  * It comes with a default 6px baseline to maintain rhythm on all block elements
  * It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style
  * It uses modular scale values to set font-size
- * It provides settings for adjusting headlines based on screen width
+ * It has optional default type rules, `_typesetted.scss`, that includes settings for adjusting headlines based screen width
 
 ## How to setup
 
@@ -36,6 +36,7 @@ To start using Typesettings `@import` the `_typesettings.scss` partial into your
  $ms-ratio: 1.414;
  $paragraph-indent: true;
  $paragraph-justify: true;
+ $load-typesetted: true;
 
  @import "path/typesettings"; // Here is the _typesettings.scss partial
 
