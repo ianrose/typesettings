@@ -10,7 +10,7 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
  * It comes with a default 6px baseline to maintain rhythm on all block elements
  * It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style
  * It uses modular scale values to set font-size
- * It has optional default type rules, `_typesetted.scss`, that includes settings for adjusting headlines based on screen width
+ * It has optional default type styles that includes settings for adjusting headlines based on screen width
 
 ## How to setup
 
