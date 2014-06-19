@@ -150,6 +150,40 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
   padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
+// Creates base type baseline overlay and veritcal unit overlay.
+// To use on the body tag for example, body { @include debug-vertical-alignment(); } and add class debug to the body tag
+@mixin debug-vertical-alignment($opacity: 0.8, $vertical-unit: $base-vertical-unit, $type-baseline: $base-line-height) {
+  position: relative;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  &:before {
+    z-index: 10;
+    background-image: linear-gradient(rgba(233, 0, 0, $opacity) 1px, transparent 1px);
+    background-size: 100% ($type-baseline * $base-font-size);
+  }
+
+  &:after {
+    z-index: 9;
+    background-image: linear-gradient(rgba(26, 59, 173, $opacity) 1px, transparent 1px);
+    background-size: 100% $vertical-unit;
+  }
+
+  &.debug:before, &.debug:after {
+    display: block;
+    pointer-events: none;
+  }
+}
+
 @if $load-typesetted {
   //==============================================================================
   // Default Type Styles
