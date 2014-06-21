@@ -150,7 +150,7 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
   padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
-// Creates base type baseline overlay and veritcal unit overlay.
+// Creates base type baseline overlay and vertical unit overlay.
 // To use on the body tag for example: body { @include debug-vertical-alignment(); } and add class va-debug to the body tag
 @mixin debug-vertical-alignment($opacity: 0.8, $vertical-unit: $base-vertical-unit, $type-baseline: $base-line-height) {
   position: relative;
