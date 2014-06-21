@@ -168,13 +168,15 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 
   &:before {
     z-index: 10;
-    background-image: linear-gradient(rgba(233, 0, 0, $opacity) 1px, transparent 1px);
-    background-size: 100% ($type-baseline * $base-font-size);
+    background-image: -webkit-linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-image: linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 100% ($base-line-height * 1em);
   }
 
   &:after {
     z-index: 9;
-    background-image: linear-gradient(rgba(26, 59, 173, $opacity) 1px, transparent 1px);
+    background-image: -webkit-linear-gradient(rgba(0, 233, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-image: linear-gradient(rgba(0, 233, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
     background-size: 100% $vertical-unit;
   }
 
