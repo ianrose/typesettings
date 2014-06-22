@@ -62,7 +62,13 @@ $load-typesetted: true !default;
 // It's Best not to adjust the internal variables directly.[Note]
 
 // Converts the $base-font-size value to EMs
-$base-em-font-size: ($base-font-size / 16px) * 1em !default;
+$base-em-font-size: null;
+@if $load-typesetted {
+  $base-em-font-size: 1em;
+}
+@else {
+  $base-em-font-size:($base-font-size / 16px) * 1em;
+}
 
 // Generates modular scale values in Ems. [Note]If you need more size up and/or down
 // then add more sizes.
