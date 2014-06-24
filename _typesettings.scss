@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/** 
+/**
 * ==============================================================================
 * Typesettings
 * ==============================================================================
@@ -95,7 +95,7 @@ $ms-up4: $ms-up3 * $ms-ratio; // [7]
   @return stripUnits(($target / $context)) + 0em;
 }
 
-// Returns an EM value that is a multiple of our defined base vertical unit. For 
+// Returns an EM value that is a multiple of our defined base vertical unit. For
 // example 3 becomes 1.125em
 @function emRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size) {
   @return (stripUnits($lines) * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
@@ -103,7 +103,7 @@ $ms-up4: $ms-up3 * $ms-ratio; // [7]
 
 // Returns a unitless number that is a multiple of our defined base vertical unit.
 // For example 3 becomes 1.125
-@function unitlessRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size) {
+@function unitlessRhythm($lines: $base-line-multi, $font-size: $base-em-font-size) {
   @return ($lines * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size));
 }
 
@@ -148,7 +148,7 @@ $ms-up4: $ms-up3 * $ms-ratio; // [7]
 
 // Creates base type baseline overlay and vertical unit overlay.
 // To use on the body tag for example: body { @include debug-vertical-alignment(); } and add class va-debug to the body tag
-@mixin debug-vertical-alignment($opacity: 0.8, $vertical-unit: $base-vertical-unit, $type-baseline: $base-line-height) {
+@mixin debug-vertical-alignment($opacity: 0.8, $vertical-unit: $base-vertical-unit, $type-base-line-multi: $base-line-multi, $type-size: $base-em-font-size) {
   position: relative;
 
   &:before, &:after {
@@ -166,7 +166,7 @@ $ms-up4: $ms-up3 * $ms-ratio; // [7]
     z-index: 10;
     background-image: -webkit-linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
     background-image: linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
-    background-size: 100% ($base-line-height * 1em);
+    background-size: 100% (unitlessRhythm($type-base-line-multi, $type-size) + 0rem);
   }
 
   &:after {
