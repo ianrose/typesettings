@@ -146,6 +146,42 @@ $ms-up4: $ms-up3 * $ms-ratio; // [7]
   padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
+// Creates base type baseline overlay and vertical unit overlay.
+// To use on the body tag for example: body { @include debug-vertical-alignment(); } and add class va-debug to the body tag
+@mixin debug-vertical-alignment($opacity: 0.8, $vertical-unit: $base-vertical-unit, $type-baseline: $base-line-height) {
+  position: relative;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  &:before {
+    z-index: 10;
+    background-image: -webkit-linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-image: linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 100% ($base-line-height * 1em);
+  }
+
+  &:after {
+    z-index: 9;
+    background-image: -webkit-linear-gradient(rgba(0, 233, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-image: linear-gradient(rgba(0, 233, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 100% $vertical-unit;
+  }
+
+  &.va-debug:before, &.va-debug:after {
+    display: block;
+    pointer-events: none;
+  }
+}
+
 // Sets the font-size of the project as a percentage. Making it easy to
 // scale up/down the whole project for specific media queries
 html {
