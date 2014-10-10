@@ -1,21 +1,12 @@
-/** 
-* ==============================================================================
-* Typesettings
-* ==============================================================================
-* A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm,
-* and responsive ratio based headlines. Oh, and pixel borders that maintain
-* rhythm.
-*
-* Release Versions: https://github.com/ianrose/typesettings/releases
-* Github: https://github.com/ianrose/typesettings
-* License: The MIT License (MIT)
-*
-* Inspired by and used stuff from:
-* https://github.com/typeplate/typeplate.github.io
-* https://github.com/csswizardry/typecsset
-*/
 html {
-  font-size: 100%;
+  font-size: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5; }
+
+html {
   -webkit-text-size-adjust: 100%; }
 
 body {
@@ -23,7 +14,6 @@ body {
   padding: 0;
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 400;
-  line-height: 1.5;
   color: #000; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
