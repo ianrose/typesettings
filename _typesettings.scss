@@ -290,7 +290,7 @@ body {
 
   p {
     margin-top: 0;
-    margin-bottom: emRhythm(4);
+    margin-bottom: emRhythm($base-line-multi);
     padding-top: 0;
     padding-bottom: 0;
     max-width: emRhythm(96);
@@ -310,8 +310,8 @@ body {
 
   @if $paragraph-indent {
     p + p {
-      margin-top: emRhythm(-4);
-      text-indent: emRhythm(4);
+      margin-top: emRhythm($base-line-multi * -1);
+      text-indent: emRhythm($base-line-multi);
     }
   }
 
