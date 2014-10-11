@@ -199,9 +199,10 @@ body {
   // Default Type Styles
   //==============================================================================
 
-  // Stops iOS from scaling up text.
+  // Stops devices from scaling up text.
   html {
-    -webkit-text-size-adjust: 100%; // [2]
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
 
   body {
@@ -295,6 +296,7 @@ body {
     padding-bottom: 0;
     max-width: emRhythm(96);
     -webkit-hyphens: auto;
+    -epub-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -o-hyphens: auto;
