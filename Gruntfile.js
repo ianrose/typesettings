@@ -62,7 +62,8 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
             livereload: LIVERELOAD_PORT
           },
           files: [
-            'test/*.html'
+            'test/*.html',
+            'test/*.css'
           ]
         }
       }
