@@ -50,7 +50,7 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
     },
     watch: {
         sass: {
-          files: '*.{scss,sass}',
+          files: ['*.{scss,sass}', 'test/*{scss,sass}'],
           tasks: ['sass']
         },
         csslint: {
