@@ -238,54 +238,54 @@ body {
   // [5] Sets the type to one of the modular scale values and the second argument
   // sets a unitless line-height as a multiple of the vertical grid.
   h1, .h1 {
-    margin-bottom: emRhythm(4, $ms-up2); // [1]
+    margin-bottom: emRhythm(1, $ms-up2); // [1]
     @include setType(6, $ms-up2); // [2]
 
     @media (min-width: 43.75em) {
       // [3]
-      margin-bottom: emRhythm(4, $ms-up3); // [4]
+      margin-bottom: emRhythm(1, $ms-up3); // [4]
       @include setType(8, $ms-up3); // [5]
     }
 
     @media (min-width: 56.25em) {
-      margin-bottom: emRhythm(4, $ms-up4);
+      margin-bottom: emRhythm(1, $ms-up4);
       @include setType(10, $ms-up4);
     }
   }
 
   h2, .h2 {
-    margin-bottom: emRhythm(4, $ms-up1);
+    margin-bottom: emRhythm(1, $ms-up1);
     @include setType(5, $ms-up1);
 
     @media (min-width: 43.75em) {
-      margin-bottom: emRhythm(4, $ms-up2);
+      margin-bottom: emRhythm(1, $ms-up2);
       @include setType(6, $ms-up2)
     }
 
     @media (min-width: 56.25em) {
-      margin-bottom: emRhythm(4, $ms-up3);
+      margin-bottom: emRhythm(1, $ms-up3);
       @include setType(8, $ms-up3);
     }
   }
 
   h3, .h3 {
-    margin-bottom: emRhythm(4, $ms-up1);
+    margin-bottom: emRhythm(1, $ms-up1);
     @include setType(5, $ms-up1);
 
     @media (min-width: 56.25em) {
-      margin-bottom: emRhythm(4, $ms-up2);
+      margin-bottom: emRhythm(1, $ms-up2);
       @include setType(6, $ms-up2);
     }
   }
 
   h4, .h4 {
-    margin-bottom: emRhythm(4, $ms-up1);
+    margin-bottom: emRhythm(1, $ms-up1);
     @include setType(5, $ms-up1);
   }
 
   h5, .h5,
   h6, .h6 {
-    margin-bottom: emRhythm(4);
+    margin-bottom: emRhythm(1);
     @include setType(4);
   }
 
