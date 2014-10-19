@@ -7,7 +7,8 @@ body {
   line-height: 1.5; }
 
 html {
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
 
 body {
   margin: 0;
@@ -25,52 +26,52 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-transform: uppercase; }
 
 h1, .h1 {
-  margin-bottom: 0.75023em;
-  font-size: 1.9994em;
-  line-height: 1.12534; }
+  margin-bottom: 0.1875566421em;
+  font-size: 1.999396em;
+  line-height: 1.1253398526; }
   @media (min-width: 43.75em) {
     h1, .h1 {
-      margin-bottom: 0.53057em;
-      font-size: 2.82715em;
-      line-height: 1.06114; } }
+      margin-bottom: 0.132642604em;
+      font-size: 2.827145944em;
+      line-height: 1.0611408323; } }
   @media (min-width: 56.25em) {
     h1, .h1 {
-      margin-bottom: 0.37523em;
-      font-size: 3.99758em;
-      line-height: 0.93807; } }
+      margin-bottom: 0.0938066507em;
+      font-size: 3.9975843648em;
+      line-height: 0.9380665066; } }
 
 h2, .h2 {
-  margin-bottom: 1.06082em;
+  margin-bottom: 0.2652050919em;
   font-size: 1.414em;
-  line-height: 1.32603; }
+  line-height: 1.3260254597; }
   @media (min-width: 43.75em) {
     h2, .h2 {
-      margin-bottom: 0.75023em;
-      font-size: 1.9994em;
-      line-height: 1.12534; } }
+      margin-bottom: 0.1875566421em;
+      font-size: 1.999396em;
+      line-height: 1.1253398526; } }
   @media (min-width: 56.25em) {
     h2, .h2 {
-      margin-bottom: 0.53057em;
-      font-size: 2.82715em;
-      line-height: 1.06114; } }
+      margin-bottom: 0.132642604em;
+      font-size: 2.827145944em;
+      line-height: 1.0611408323; } }
 
 h3, .h3 {
-  margin-bottom: 1.06082em;
+  margin-bottom: 0.2652050919em;
   font-size: 1.414em;
-  line-height: 1.32603; }
+  line-height: 1.3260254597; }
   @media (min-width: 56.25em) {
     h3, .h3 {
-      margin-bottom: 0.75023em;
-      font-size: 1.9994em;
-      line-height: 1.12534; } }
+      margin-bottom: 0.1875566421em;
+      font-size: 1.999396em;
+      line-height: 1.1253398526; } }
 
 h4, .h4 {
-  margin-bottom: 1.06082em;
+  margin-bottom: 0.2652050919em;
   font-size: 1.414em;
-  line-height: 1.32603; }
+  line-height: 1.3260254597; }
 
 h5, .h5, h6, .h6 {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.375em;
   font-size: 1em;
   line-height: 1.5; }
 
@@ -81,6 +82,7 @@ p {
   padding-bottom: 0;
   max-width: 36em;
   -webkit-hyphens: auto;
+  -epub-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -o-hyphens: auto;
@@ -95,7 +97,7 @@ p + p {
   text-indent: 1.5em; }
 
 small, .font-small {
-  font-size: 0.70721em;
+  font-size: 0.7072135785em;
   line-height: 1.59075; }
 
 em {
@@ -107,13 +109,14 @@ strong {
 blockquote {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  margin-left: -1.875em;
+  margin-left: 0;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 1.5em;
   border-left: 6px solid #808080;
-  font-family: 'Lucida Console', Monaco, monospace;
-  font-weight: bold; }
+  font-family: Georgia, 'Times New Roman', serif; }
+  blockquote p {
+    margin-bottom: 0.75em; }
   blockquote footer cite:before {
     content: " – "; }
 
