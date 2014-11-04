@@ -82,15 +82,15 @@ $ms-up3: $ms-up2 * $ms-ratio; // [6]
 $ms-up4: $ms-up3 * $ms-ratio; // [7]
 
 // Warning message text for when an integer is not used in rhythm functions
-$float-point-warn: 'Vertical Rhythm is broken, use an interger (whole) not float (decimal) for $lines';
+$not-integer-txt: ' value breaks vertical rhythm. Use an interger (whole number) for $lines.';
 
 //==============================================================================
 // Helper function(s)
 //==============================================================================
 
-// Check if value is a floating point number and returns true or false
-@function is-float($value) {
-  @return type-of($value) == number and floor(abs($value)) != abs($value);
+// Check if value is an integer and returns true or false
+@function is-int($number) {
+  @return type-of($number) == number and floor(abs($number)) == abs($number);
 }
 
 // Returns a number without a unit. For example 16px becomes 16
@@ -106,8 +106,8 @@ $float-point-warn: 'Vertical Rhythm is broken, use an interger (whole) not float
 // Returns an EM value that is a multiple of our defined base vertical unit. For
 // example 3 becomes 1.125em
 @function emRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size) {
-  @if(is-float($lines)) {
-    @warn $float-point-warn;
+  @if is-int($lines) == false {
+    @warn  #{$lines} + $not-integer-txt;
   }
   @return (stripUnits($lines) * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
@@ -115,8 +115,8 @@ $float-point-warn: 'Vertical Rhythm is broken, use an interger (whole) not float
 // Returns a unitless number that is a multiple of our defined base vertical unit.
 // For example 3 becomes 1.125
 @function unitlessRhythm($lines: $base-line-multi, $font-size: $base-em-font-size) {
-  @if(is-float($lines)) {
-    @warn $float-point-warn;
+  @if is-int($lines) == false {
+    @warn #{$lines} + $not-integer-txt;
   }
   @return ($lines * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size));
 }
