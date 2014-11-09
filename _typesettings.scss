@@ -81,7 +81,7 @@ $ms-up2: $ms-up1 * $ms-ratio; // [5]
 $ms-up3: $ms-up2 * $ms-ratio; // [6]
 $ms-up4: $ms-up3 * $ms-ratio; // [7]
 
-// Warning message text for when an integer is not used in rhythm functions
+// Warning text for when an integer is not used in rhythm functions
 $not-integer-txt: ' value breaks vertical rhythm. Use an interger (whole number) for $lines.';
 
 //==============================================================================
