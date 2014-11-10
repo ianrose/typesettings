@@ -1,5 +1,9 @@
 @import "../typesettings";
 
 .div {
-  margin-bottom: emRhythm(1.2);
+  margin-bottom: emRhythm(1.2, 4, true);
+}
+
+.div {
+  margin-bottom: emRhythm(2.3, 4, false);
 }
