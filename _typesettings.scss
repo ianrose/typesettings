@@ -105,8 +105,8 @@ $not-integer-txt: ' value breaks vertical rhythm. Use an interger (whole number)
 
 // Returns an EM value that is a multiple of our defined base vertical unit. For
 // example 3 becomes 1.125em
-@function emRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size, $slient: false) {
-  @if is-int($lines) == false and $slient == false {
+@function emRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size, $silent: false) {
+  @if is-int($lines) == false and $silent == false {
     @warn  #{$lines} + $not-integer-txt;
   }
   @return (stripUnits($lines) * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
@@ -114,8 +114,8 @@ $not-integer-txt: ' value breaks vertical rhythm. Use an interger (whole number)
 
 // Returns a unitless number that is a multiple of our defined base vertical unit.
 // For example 3 becomes 1.125
-@function unitlessRhythm($lines: $base-line-multi, $font-size: $base-em-font-size, $slient: false) {
-  @if is-int($lines) == false and $slient == false {
+@function unitlessRhythm($lines: $base-line-multi, $font-size: $base-em-font-size, $silent: false) {
+  @if is-int($lines) == false and $silent == false {
     @warn #{$lines} + $not-integer-txt;
   }
   @return ($lines * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size));
