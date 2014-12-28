@@ -59,11 +59,11 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
     },
     watch: {
         sass: {
-          files: ['*.{scss,sass}', 'test/*{scss,sass}'],
+          files: ['*.{scss,sass}', 'test/scss/*{scss,sass}'],
           tasks: ['sass']
         },
         less: {
-          files: ['*.less', 'test/*less'],
+          files: ['*.less', 'test/less/*less'],
           tasks: ['less']
         },
         csslint: {
@@ -76,7 +76,7 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
           },
           files: [
             'test/*.html',
-            'test/*.css'
+            'test/scss/*.css'
           ]
         }
       }
