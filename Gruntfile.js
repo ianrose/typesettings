@@ -12,6 +12,7 @@ module.exports = function (grunt) {
 
 // Load the plugins.
 grunt.loadNpmTasks('grunt-sass');
+grunt.loadNpmTasks('grunt-contrib-less');
 grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-csslint');
@@ -34,7 +35,14 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
     sass: {
       dist: {
         files: {
-          'test/test.css': 'test/test.scss'
+          'test/scss/styles.css': 'test/scss/styles.scss'
+        }
+      }
+    },
+    less: {
+      dist: {
+        files: {
+          'test/less/styles.css': 'test/less/styles.less'
         }
       }
     },
@@ -44,7 +52,8 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
       },
       check: {
         src: [
-          'test/*.css'
+          'test/less/*.css',
+          'test/scss/*.css'
         ]
       }
     },
@@ -52,6 +61,10 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
         sass: {
           files: ['*.{scss,sass}', 'test/*{scss,sass}'],
           tasks: ['sass']
+        },
+        less: {
+          files: ['*.less', 'test/*less'],
+          tasks: ['less']
         },
         csslint: {
            files: 'test/*.css',
@@ -72,6 +85,18 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
   // Default task(s).
   grunt.registerTask('default', [
     'sass',
+    'csslint',
+    'connect:livereload',
+    'watch'
+  ]);
+  grunt.registerTask('sasstest', [
+    'sass',
+    'csslint',
+    'connect:livereload',
+    'watch'
+  ]);
+  grunt.registerTask('lesstest', [
+    'less',
     'csslint',
     'connect:livereload',
     'watch'
