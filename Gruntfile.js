@@ -76,7 +76,8 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
           },
           files: [
             'test/*.html',
-            'test/scss/*.css'
+            'test/scss/*.css',
+            'test/less/*css'
           ]
         }
       }
