@@ -11,10 +11,11 @@ var mountFolder = function (connect, dir) {
 module.exports = function (grunt) {
 
 // Load the plugins.
-grunt.loadNpmTasks('grunt-sass');
-grunt.loadNpmTasks('grunt-contrib-connect');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
 
 // Project configuration.
   grunt.initConfig({
@@ -34,7 +35,14 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
     sass: {
       dist: {
         files: {
-          'test/test.css': 'test/test.scss'
+          'test/scss/styles.css': 'test/scss/styles.scss'
+        }
+      }
+    },
+    stylus: {
+      compile: {
+        files: {
+          'test/styl/styles.css': 'test/styl/styles.styl'
         }
       }
     },
@@ -44,36 +52,56 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
       },
       check: {
         src: [
-          'test/*.css'
+          'test/scss/*.css',
+          'test/styl/*.css'
         ]
       }
     },
     watch: {
-        sass: {
-          files: ['*.{scss,sass}', 'test/*{scss,sass}'],
-          tasks: ['sass']
+      sass: {
+        files: ['*.{scss,sass}', 'test/scss/*{scss,sass}'],
+        tasks: ['sass']
+      },
+      stylus: {
+        files: ['*.styl', 'test/styl/*styl'],
+        tasks: ['stylus']
+      },
+      csslint: {
+        files: 'test/*.css',
+        tasks: ['csslint']
+      },
+      livereload: {
+        options: {
+          livereload: LIVERELOAD_PORT
         },
-        csslint: {
-           files: 'test/*.css',
-           tasks: ['csslint']
-        },
-        livereload: {
-          options: {
-            livereload: LIVERELOAD_PORT
-          },
-          files: [
-            'test/*.html',
-            'test/*.css'
-          ]
-        }
+        files: [
+          'test/*.html',
+          'test/scss/*.css',
+          'test/styl/*.css'
+        ]
       }
-    });
+    }
+  });
 
   // Default task(s).
   grunt.registerTask('default', [
+    'sass',
+    'stylus',
+    'csslint',
+    'connect:livereload',
+    'watch'
+  ]);
+  grunt.registerTask('sasstest', [
     'sass',
     'csslint',
     'connect:livereload',
     'watch'
   ]);
+  grunt.registerTask('stylustest', [
+    'stylus',
+    'csslint',
+    'connect:livereload',
+    'watch'
+  ]);
 };
+
