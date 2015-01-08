@@ -1,4 +1,6 @@
-@import "../typesettings";
+$base-font-size: 16px;
+
+@import "../../typesettings";
 
 .div {
   margin-bottom: emRhythm(1.2, 4, true);
