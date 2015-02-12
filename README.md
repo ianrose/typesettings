@@ -96,6 +96,7 @@ Typesettings uses relative units and many of the values outputted are a result o
 
 ## Thanks and Resources
 
+* [@johngerom](https://github.com/johngerome): [Stylus version](https://github.com/ianrose/typesettings/blob/master/_typesettings.styl)
 * [Type-scale.com](http://type-scale.com/)
 * [Typeplate](https://github.com/typeplate/typeplate.github.io)
 * [Typecsset](https://github.com/csswizardry/typecsset)
