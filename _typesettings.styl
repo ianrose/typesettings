@@ -126,13 +126,13 @@ unitlessRhythm($lines= $base-line-multi, $font-size= $base-em-font-size, $silent
 
 // Sets the type in EMs and makes a vertical rhythm unitless line-height that is
 // based on context.
-setType($lines= $base-line-multi, $font-size= $base-em-font-size)
+setType($lines= $base-line-multi, $font-size= $base-em-font-size, $silent= false)
   font-size: $font-size;
-  line-height: unitlessRhythm($lines, $font-size);
+  line-height: unitlessRhythm($lines, $font-size, $silent);
 
 // Creates a vertical rhythm unitless line-height that is based on context
-setLeading($lines= $base-line-multi, $font-size= $base-em-font-size)
-  line-height: unitlessRhythm($lines, $font-size);
+setLeading($lines= $base-line-multi, $font-size= $base-em-font-size, $silent= false)
+  line-height: unitlessRhythm($lines, $font-size, $silent);
 
 // Creates a pixel width border top with padding that is a multiple of the base
 // vertical grid unit. You will need to set border style and color rules.
