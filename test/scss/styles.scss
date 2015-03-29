@@ -7,5 +7,75 @@ $base-font-size: 16px;
 }
 
 .div {
-  margin-bottom: emRhythm(2.3, 4, false);
+  margin-bottom: emRhythm(2.3, 4, true);
+}
+
+.ms-up10 {
+  line-height: 1;
+  font-size: $ms-up10;
+}
+
+.ms-up9 {
+  line-height: 1;
+  font-size: $ms-up9;
+}
+
+.ms-up8 {
+  line-height: 1;
+  font-size: $ms-up8;
+}
+
+.ms-up7 {
+  line-height: 1;
+  font-size: $ms-up7;
+}
+
+.ms-up6 {
+  line-height: 1;
+  font-size: $ms-up6;
+}
+
+.ms-up5 {
+  line-height: 1;
+  font-size: $ms-up5;
+}
+
+.ms-up4 {
+  line-height: 1;
+  font-size: $ms-up4;
+}
+
+.ms-up3 {
+  line-height: 1;
+  font-size: $ms-up3;
+}
+
+.ms-up2 {
+  line-height: 1;
+  font-size: $ms-up2;
+}
+
+.ms-up1 {
+  line-height: 1;
+  font-size: $ms-up1;
+}
+
+.ms-down1 {
+  line-height: 1;
+  font-size: $ms-down1;
+}
+
+.ms-down2 {
+  line-height: 1;
+  font-size: $ms-down2;
+}
+
+.ms-down3 {
+  line-height: 1;
+  font-size: $ms-down3;
+}
+
+.ms-down4 {
+  line-height: 1;
+  font-size: $ms-down4;
 }
