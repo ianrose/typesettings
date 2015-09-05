@@ -69,8 +69,8 @@ $base-em-font-size= 1em;
 // [2] One step up in the modular scale in EMs
 $ms-down1= $base-em-font-size / $ms-ratio; // [1]
 $ms-down2= $ms-down1 /$ms-ratio;
-$ms-down3= $ms-down2 / $ms-ratio; 
-$ms-down4= $ms-down3 / $ms-ratio; 
+$ms-down3= $ms-down2 / $ms-ratio;
+$ms-down4= $ms-down3 / $ms-ratio;
 $ms-up1= $base-em-font-size * $ms-ratio; // [2]
 $ms-up2= $ms-up1 * $ms-ratio;
 $ms-up3= $ms-up2 * $ms-ratio;
@@ -302,13 +302,6 @@ if $load-typesetted
     padding-top: 0;
     padding-bottom: 0;
     max-width: emRhythm(96);
-    -webkit-hyphens: auto;
-    -epub-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -o-hyphens: auto;
-    hyphens: auto;
-    word-wrap: break-word;
 
     if $paragraph-justify {
       @media (min-width: 43.75em) {
