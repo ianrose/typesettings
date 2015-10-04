@@ -14,11 +14,13 @@ Set your type in Ems with modular scale, vertical rhythm, and responsive ratio b
 
 ## How to setup
 
-There are three ways you can download Typesettings.
+There are four ways you can download Typesettings.
 
 * [Download the latest release](https://github.com/ianrose/typesettings/releases/latest)
 * Clone the repo: `git clone https://github.com/ianrose/typesettings.git`
-* Install with [Bower](http://bower.io/): `bower install typesettings --save-dev`
+* Install with [Bower](http://bower.io/): `bower install typesettings --save`
+* Install with [npm](https://www.npmjs.com): `npm install typesettings --save`
+  * Check out [Eyeglass](https://github.com/sass-eyeglass/eyeglass)
 
 To start using Typesettings `@import` the `_typesettings.scss` partial into your Sass project after your CSS reset.
 
