@@ -1,3 +1,5 @@
+[![Gitter](https://badges.gitter.im/ianrose/typesettings.svg)](https://gitter.im/ianrose/typesettings?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 Typesettings
 ============
 
@@ -104,6 +106,8 @@ Typesettings uses relative units and many of the values outputted are a result o
 * [Typecsset](https://github.com/csswizardry/typecsset)
 * [Compass](https://github.com/chriseppstein/compass)
 * [Sassaparilla](http://sass.fffunction.co/)
+
+Please ask questions on [Gitter](https://gitter.im/ianrose/typesettings?utm_source=share-link&utm_medium=link&utm_campaign=share-link) and use [GitHub issues](https://github.com/ianrose/typesettings/issues) for bugs.
 
 ## License
 
