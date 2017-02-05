@@ -198,30 +198,22 @@ $not-integer-txt: ' value breaks vertical rhythm. Use an integer (whole number) 
   }
 }
 
-// Sets the font-size of the project as a percentage. Making it easy to
-// scale up/down the whole project for specific media queries
-html {
-  font-size: ($base-font-size / 16px) * 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  @include setLeading();
-}
-
 @if $load-typesetted {
   //==============================================================================
   // Default Type Styles
   //==============================================================================
 
+  // Sets the font-size of the project as a percentage. Making it easy to
+  // scale up/down the whole project for specific media queries
   // Stops devices from scaling up text.
   html {
+    font-size: ($base-font-size / 16px) * 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
 
   body {
+    @include setLeading();
     margin: 0;
     padding: 0;
     font-family: $font-serif;
