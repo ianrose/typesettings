@@ -1,0 +1,29 @@
+//==============================================================================
+// Internal Variables
+//==============================================================================
+// It's Best not to adjust the internal variables directly.[Note]
+
+// Creates a handy variable for the 1em
+$base-em-font-size: 1em;
+
+// Generates modular scale values in Ems. [Note]If you need more size up and/or down
+// then add more sizes.
+// [1] One step down in the modular scale in EMs
+// [2] One step up in the modular scale in EMs
+$ms-down1: $base-em-font-size / $ms-ratio; // [1]
+$ms-down2: $ms-down1 /$ms-ratio;
+$ms-down3: $ms-down2 / $ms-ratio;
+$ms-down4: $ms-down3 / $ms-ratio;
+$ms-up1: $base-em-font-size * $ms-ratio; // [2]
+$ms-up2: $ms-up1 * $ms-ratio;
+$ms-up3: $ms-up2 * $ms-ratio;
+$ms-up4: $ms-up3 * $ms-ratio;
+$ms-up5: $ms-up4 * $ms-ratio;
+$ms-up6: $ms-up5 * $ms-ratio;
+$ms-up7: $ms-up6 * $ms-ratio;
+$ms-up8: $ms-up7 * $ms-ratio;
+$ms-up9: $ms-up8 * $ms-ratio;
+$ms-up10: $ms-up9 * $ms-ratio;
+
+// Warning text for when an integer is not used in rhythm functions
+$not-integer-txt: ' value breaks vertical rhythm. Use an integer (whole number) for $lines.';
