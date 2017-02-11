@@ -34,5 +34,9 @@ $ms-ratio: 1.414 !default;
 $paragraph-indent: true !default; // [1]
 $paragraph-justify: true !default; // [2]
 
+// Optionally set html and body font-size and line-height for. See
+// _global-init.scss
+$global-init: false !default;
+
 // You can optionally load type styles that use Typesettings.
 $load-typesetted: true !default;
