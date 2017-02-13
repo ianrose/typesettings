@@ -1,0 +1,42 @@
+//==============================================================================
+// Config Variables
+//==============================================================================
+// The config variables have default values that are just looking to be adjusted.
+// Use this variables to customize your Typesettings. Or take the whole thing
+// apart if you want :)
+
+// Font families and default text color.
+$font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-serif: Georgia, 'Times New Roman', serif !default;
+$font-mono: 'Lucida Console', Monaco, monospace !default;
+$text-color: #000 !default;
+
+// The vertical grid unit. Margin, padding, and line-height are set to multiples
+// of this value. This is the value that determines the baseline for our vertical
+// rhythm. The default value of 6px allows more fine tuned designs that still
+// obey vertical rhythm.
+$base-vertical-unit: 6px !default;
+
+// The value that multiplies the $base-vertical-unit to get the $base-line-height.
+// This gives type an ideal line-height.
+$base-line-multi: 4 !default;
+
+// Base font size in pixels.
+$base-font-size: 16px !default;
+
+// Modular scale ratio that is used to figure out all the different font sizes
+$ms-ratio: 1.414 !default;
+
+// [1] Paragraph setting that you can turn on or off the indent of the first line
+// of a new paragraph.
+// [2] Paragraph setting that you can turn on or off to have your paragraphs ragged
+// right or justified.
+$paragraph-indent: true !default; // [1]
+$paragraph-justify: true !default; // [2]
+
+// Optionally set html and body font-size and line-height for. See
+// _global-init.scss
+$global-init: false !default;
+
+// You can optionally load type styles that use Typesettings.
+$load-typesetted: true !default;

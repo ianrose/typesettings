@@ -41,8 +41,37 @@ To start using Typesettings `@import` the `_typesettings.scss` partial into your
  $paragraph-indent: true;
  $paragraph-justify: true;
  $load-typesetted: true;
+ $global-init: false; // By default set to false, loaded with typesetted
 
  @import "path/typesettings"; // Here is the _typesettings.scss partial
+
+ @import "path/your-styles";
+```
+
+### Advanced Usage
+
+With v4.0 you now have the ability to easily import Typesettings' mixins, functions, and internal variables separately and use them how you see fit within your project. For example:
+
+```scss
+ @import "path/your-reset";
+
+ // Your settings for Typesettings :)
+ $font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ $font-serif: Georgia, 'Times New Roman', serif;
+ $font-mono: 'Lucida Console', Monaco, monospace;
+ $text-color: #000;
+ $base-vertical-unit: 6px;
+ $base-line-multi: 4;
+ $base-font-size: 16px;
+ $ms-ratio: 1.414;
+
+ // Import only the functionality of Typesettings you want
+ @import "path/typesettings/settings";
+ @import "path/typesettings/internal";
+ @import "path/typesettings/functions";
+ @import "path/typesettings/mixins";
+
+ @include typesettingsInit();
 
  @import "path/your-styles";
 ```

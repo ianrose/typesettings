@@ -1,0 +1,88 @@
+//==============================================================================
+// Mixin(s)
+//==============================================================================
+// Finally, the tools that you can use throughout your project to set
+// all the wonderful type related stuffs.
+
+// Sets the type in EMs and makes a vertical rhythm unitless line-height that is
+// based on context.
+@mixin setType($lines: $base-line-multi, $font-size: $base-em-font-size, $silent: false) {
+  font-size: $font-size;
+  line-height: unitlessRhythm($lines, $font-size, $silent);
+}
+
+// Creates a vertical rhythm unitless line-height that is based on context
+@mixin setLeading($lines: $base-line-multi, $font-size: $base-em-font-size, $silent: false) {
+  line-height: unitlessRhythm($lines, $font-size, $silent);
+}
+
+// Creates a pixel width border top with padding that is a multiple of the base
+// vertical grid unit. You will need to set border style and color rules.
+@mixin rhythmBorderTop($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
+  border-top-width: $border-width;
+  padding-top: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+// Creates a pixel width border bottom with padding that is a multiple of the base
+// vertical grid unit. You will need to set border style and color rules.
+@mixin rhythmBorderBottom($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
+  border-bottom-width: $border-width;
+  padding-bottom: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+// Creates a pixel width border with padding that is a multiple of the base
+// vertical grid unit. You will need to set border style and color rules.
+@mixin rhythmBorder($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size) {
+  border-width: $border-width;
+  padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+// Creates base type baseline overlay and vertical unit overlay.
+// To use on the body tag for example: body { @include debug-vertical-alignment(); } and add class va-debug to the body tag
+@mixin debug-vertical-alignment($opacity: 0.8, $vertical-unit: $base-vertical-unit, $type-base-line-multi: $base-line-multi, $type-size: $base-em-font-size) {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  &::before {
+    z-index: 10;
+    background-image: -webkit-linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-image: linear-gradient(rgba(233, 0, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 100% (unitlessRhythm($type-base-line-multi, $type-size) + 0rem);
+  }
+
+  &::after {
+    z-index: 9;
+    background-image: -webkit-linear-gradient(rgba(0, 233, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-image: linear-gradient(rgba(0, 233, 0, $opacity) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 100% $vertical-unit;
+  }
+
+  &.va-debug::before,
+  &.va-debug::after {
+    display: block;
+    pointer-events: none;
+  }
+}
+
+@mixin typesettingsInit() {
+  html {
+    font-size: ($base-font-size / 16px) * 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  body {
+    @include setLeading();
+  }
+}
