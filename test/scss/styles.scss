@@ -1,7 +1,21 @@
+$font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: Georgia, 'Times New Roman', serif;
+$font-mono: 'Lucida Console', Monaco, monospace;
+$text-color: #000;
+$base-vertical-unit: 6px;
+$base-line-multi: 4;
 $base-font-size: 16px;
+$ms-ratio: 1.414;
+$paragraph-indent: true;
+$paragraph-justify: true;
+$global-init: false;
 $load-typesetted: true;
 
 @import "../../typesettings";
+
+body {
+  // @include debug-vertical-alignment();
+}
 
 .div {
   margin-bottom: emRhythm(1.2, 4, true);
