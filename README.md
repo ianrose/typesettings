@@ -121,7 +121,7 @@ You can also look at the [source code](https://github.com/ianrose/typesettings-s
 
 ## Requirements
 
-Sass, that's it.
+Sass or Stylus, that's it.
 
 ## Precision
 
