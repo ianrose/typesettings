@@ -1,4 +1,4 @@
-[![Gitter](https://badges.gitter.im/ianrose/typesettings.svg)](https://gitter.im/ianrose/typesettings?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![npm](https://img.shields.io/npm/dt/typesettings.svg)]() [![GitHub release](https://img.shields.io/github/release/ianrose/typesettings.svg)]() [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ianrose/typesettings/master/LICENSE) [![Gitter](https://badges.gitter.im/ianrose/typesettings.svg)](https://gitter.im/ianrose/typesettings?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Typesettings
 ============
