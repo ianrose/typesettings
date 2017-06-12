@@ -2,7 +2,7 @@
   "name": "typesettings",
   "version": "4.0.0",
   "description": "A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.",
-  "main": "_typesettings.scss",
+  "main": "index.js",
   "devDependencies": {
     "connect-livereload": "^0.4.0",
     "grunt": "^0.4.5",
