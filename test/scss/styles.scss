@@ -13,6 +13,12 @@ $load-typesetted: true;
 
 @import "../../typesettings";
 
+@include typesettingsInit($base-font-size)
+
+@media (min-width: 600px) {
+  @include typesettingsInit(20px)
+}
+
 body {
   // @include debug-vertical-alignment();
 }
