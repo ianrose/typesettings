@@ -10,7 +10,15 @@
     "grunt-contrib-csslint": "^0.3.1",
     "grunt-contrib-stylus": "^0.20.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^1.0.0"
+    "grunt-sass": "^1.0.0",
+    "postcss-cli": "^6.1.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-scss": "^2.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "grunt",
+    "scss:dist": "postcss _typesettings.scss -o dist/_typesettings.scss --config scss-config"
   },
   "repository": {
     "type": "git",
