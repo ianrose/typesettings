@@ -26,6 +26,8 @@ There are four ways you can download Typesettings.
 
 To start using Typesettings `@import` the `_typesettings.scss` partial into your Sass project after your CSS reset.
 
+There is also the bundled single file version for Sass and Stylus. An example use would be using Typesettings on Codepen or you are looking to simply copy and paste Typesettings into your project. You can also start using the single file by `@import` the `_typsettings.bundle.scss` into your Sass project after your CSS reset.
+
 ```scss
  @import "path/your-reset";
 

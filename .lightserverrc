@@ -1,0 +1,14 @@
+{
+ "port": 4000,
+ "serve": "test",
+ "bind": "localhost",
+ "delay": 100,
+ "quiet": true,
+ "watchexps": [
+    "test/scss/**/*.scss # npm run styles:scss # reloadcss",
+    "test/styl/**/*.styl # npm run styles:styl # reloadcss",
+    "test/**/*.html"
+ ],
+ "http2": false,
+ "open": false
+}
