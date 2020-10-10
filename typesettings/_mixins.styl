@@ -34,13 +34,13 @@ rhythmBorder($border-width= 1px, $lines= $base-line-multi, $font-size= $base-em-
 
 // Creates base type baseline overlay and vertical unit overlay.
 // To use on the body tag for example: body { debug-vertical-alignment(); } and add class va-debug to the body tag
-debug-vertical-alignment($opacity= 0.8, $vertical-unit= $base-vertical-unit, $type-base-line-multi= $base-line-multi, $type-size= $base-em-font-size)
+debug-vertical-alignment($position= absolute,$opacity= 0.8, $vertical-unit= $base-vertical-unit, $type-base-line-multi= $base-line-multi, $type-size= $base-em-font-size)
   position: relative;
 
   &::before,
   &::after {
     content: "";
-    position: absolute;
+    position: $position;
     top: 0;
     left: 0;
     bottom: 0;
