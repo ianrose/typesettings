@@ -14,7 +14,7 @@ $load-typesetted: true;
 @import "../../typesettings";
 
 body {
-  // @include debug-vertical-alignment();
+  @include debug-vertical-alignment('fixed', 0.3);
 }
 
 .div {
