@@ -6,13 +6,15 @@
   "devDependencies": {
     "light-server": "^2.8.0",
     "node-sass": "^4.14.1",
-    "stylus": "^0.54.8"
+    "scss-bundle": "^3.1.2",
+    "stylus": "^0.54.8",
+    "stylus-bundle": "^1.0.0"
   },
   "scripts": {
     "styles:scss": "node-sass test/scss/ --output test/scss/ --source-map true",
     "styles:styl": "stylus test/styl/ -o test/styl --sourcemap",
     "dev": "light-server -c .lightserverrc",
-    "scss:dist": "postcss _typesettings.scss -o dist/_typesettings.scss --config scss-config"
+    "bundle": "node bundleScss && node bundleStyl"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/ianrose/typesettings/issues"
   },
-  "homepage": "https://github.com/ianrose/typesettings"
+  "homepage": "https://github.com/ianrose/typesettings",
+  "type": "module"
 }
