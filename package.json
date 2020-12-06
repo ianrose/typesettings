@@ -14,7 +14,7 @@
     "styles:scss": "node-sass test/scss/ --output test/scss/ --source-map true",
     "styles:styl": "stylus test/styl/ -o test/styl --sourcemap",
     "dev": "light-server -c .lightserverrc",
-    "bundle": "node bundleScss && node bundleStyl"
+    "bundle": "node bundle"
   },
   "repository": {
     "type": "git",
