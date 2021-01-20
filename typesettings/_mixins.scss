@@ -75,7 +75,7 @@
   }
 }
 
-@mixin typesettingsInit() {
+@mixin typesettingsInit($base-font-size: 16px) {
   html {
     font-size: ($base-font-size / 16px) * 100%;
     -webkit-text-size-adjust: 100%;
